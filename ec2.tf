@@ -13,4 +13,8 @@ module "ec2_instance" {
   create                 = true
   associate_public_ip_address = true
   tags = var.resource_tags
+
+  depends_on = [
+    aws_internet_gateway.gw
+  ]
 }
