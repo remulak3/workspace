@@ -18,6 +18,13 @@ resource "aws_security_group" "workspace-communication" {
     cidr_blocks = ["${var.my_ip_address}/32"]
   }
   ingress {
+    description = "HTTP from my ip"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["${var.my_ip_address}/32"]
+  }
+  ingress {
     description = "HTTPS from my ip"
     from_port   = 443
     to_port     = 443

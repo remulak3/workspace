@@ -22,6 +22,6 @@ variable "resource_tags" {
 variable "my_ip_address" {
   description = "My ip address that could be checked on whatsmyip.org"
   type        = string
-  default     = "YOUR IP ADDRESS"
+  default     = "89.79.116.221"
 }
 
