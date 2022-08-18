@@ -12,6 +12,7 @@ module "ec2_instance" {
   subnet_id              = aws_subnet.public_subnet.id
   create                 = true
   associate_public_ip_address = true
+  user_data = "${file("jenkins-user-data.sh")}"
   tags = var.resource_tags
 
   depends_on = [
